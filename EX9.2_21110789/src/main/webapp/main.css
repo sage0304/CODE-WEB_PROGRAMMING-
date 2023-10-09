@@ -1,0 +1,197 @@
+:root {
+	--bg-color: #016A70;
+	--second-bg-color: #FFFFDD;
+	--text-color: #557A46;
+	--main-color: #A2C579;
+}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+    margin-left: 35em;
+    margin-right: 35em;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh;
+    color: var(--text-color);
+}
+.btn-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+/*Button submit*/
+.btn-box #submit {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 7rem;
+    height: 100%;
+    background: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .8rem;
+    font-size: 11pt;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    color: var(--bg-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;	
+}
+.btn-box #submit:hover {
+    color: var(--main-color);
+}
+.btn-box #submit:nth-child(2) {
+    background: transparent;
+    color: var(--main-color);
+}
+.btn-box #submit:nth-child(2):hover {
+    color: var(--bg-color);
+}
+.btn-box #submit:nth-child(2)::before {
+    background: 
+    var(--main-color);
+}
+.btn-box #submit::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+.btn-box #submit:hover::before {
+    width: 100%;
+}
+/*Button continue-shopping*/
+.btn-box-continue #continue {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 12rem;
+    background: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .8rem;
+    font-size: 11pt;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    color: var(--bg-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;	
+}
+.btn-box-continue #continue:hover {
+    color: var(--main-color);
+}
+.btn-box-continue #continue:nth-child(2) {
+    background: transparent;
+    color: var(--main-color);
+}
+.btn-box-continue #continue:nth-child(2):hover {
+    color: var(--bg-color);
+}
+.btn-box-continue #continue:nth-child(2)::before {
+    background: 
+    var(--main-color);
+}
+.btn-box-continue #continue::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+.btn-box-continue #continue:hover::before {
+    width: 100%;
+}
+/*Button update*/
+.btn-box-update {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.btn-box-update #update {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 100%;
+    background: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .8rem;
+    font-size: 9pt;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    color: var(--bg-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;	
+}
+.btn-box-update #update:hover {
+    color: var(--main-color);
+}
+.btn-box-update #update:nth-child(2) {
+    background: transparent;
+    color: var(--main-color);
+}
+.btn-box-update #update:nth-child(2):hover {
+    color: var(--bg-color);
+}
+.btn-box-update #update:nth-child(2)::before {
+    background: 
+    var(--main-color);
+}
+.btn-box-update #update::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+.btn-box-update #update:hover::before {
+    width: 100%;
+}
+h1 {     
+    color: var(--text-color);   
+}
+br {
+    clear: both;
+}
+.survey{
+	padding: 20px;
+	background-color: var(--second-bg-color);
+}
+#quantity {
+    width: 2em;
+    text-align: center;
+}
+/* The styles for the tables */
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 50em;
+}
+th, td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 0.5em;
+}
+.right {
+    text-align: right;
+}
