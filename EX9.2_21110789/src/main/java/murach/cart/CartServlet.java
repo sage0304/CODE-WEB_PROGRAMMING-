@@ -37,16 +37,28 @@ public class CartServlet extends HttpServlet {
                 cart = new Cart();
             }
 
-            //if the user enters a negative or invalid quantity,
-            //the quantity is automatically reset to 1.
             int quantity;
+            try {
+                // Check if there's a quantity already in the cart
+                LineItem existingItem = cart.getItemByProductCode(productCode);
+                if (existingItem != null) {
+                    quantity = existingItem.getQuantity()+ 1;
+                } else {
+                    quantity = Integer.parseInt(quantityString);
+                    if (quantity < 0) {
+                        quantity = 1;
+                    }
+                }
+            } catch (NumberFormatException nfe) {
+                quantity = 1;
+            }
             try {
                 quantity = Integer.parseInt(quantityString);
                 if (quantity < 0) {
                     quantity = 1;
                 }
             } catch (NumberFormatException nfe) {
-                quantity = 1;
+               
             }
 
             String path = sc.getRealPath("/WEB-INF/products.txt");
