@@ -42,4 +42,13 @@ public class Cart implements Serializable {
             }
         }
     }
+
+    public LineItem getProductCode(String productCode) {
+        for (LineItem item : items) {
+            if (item.getProduct().getCode().equals(productCode)) {
+                return item;
+            }
+        }
+        return null;
+    }
 }
